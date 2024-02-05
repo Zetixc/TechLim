@@ -94,7 +94,7 @@ body {
 /* ======================== Main Body ======================== */
 
 .topbody {
-  background: url(./assets/svg/background/background\ pertama.svg);
+  background: url("./assets/svg/background/background\ pertama.svg");
   background-position: center top;
   background-repeat: no-repeat;
   height: 3300px;
@@ -397,7 +397,7 @@ body {
 .ilmuwan {
   z-index: 3;
   position: relative;
-  background-image: url(./assets/svg/background/background\ kedua.svg);
+  background-image: url("./assets/svg/background/background\ kedua.svg");
   height: 719px;
   bottom: 90px;
   display: flex;
@@ -594,7 +594,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  background: url(./assets/svg/background/background\ footer.svg);
+  background: url("./assets/svg/background/background\ footer.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
