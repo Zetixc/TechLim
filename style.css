@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #f4f9fa;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* ========================= Bagian Navbar ============================= */
+
+#hamburger-menu {
+  display: inline-block;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+}
+
+.navbar {
+  overflow: hidden;
+  z-index: 99999;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 26px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-scrolled {
+  box-shadow: 0px 0px 8px 0px rgba(56, 133, 128, 0.3);
+  background: white;
+}
+
+.navbar .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.navbar .menu a {
+  color: #388580;
+  position: relative;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.navbar .menu a::before {
+  text-decoration: none;
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #e9c402;
+  transition: 0.3s ease-in-out;
+  border-radius: 99px;
+}
+
+.navbar .menu a:hover::before {
+  width: 100%;
+}
+
+.navbar .menu .active::before {
+  width: 0;
+}
+
+.navbar .menu a:hover {
+  text-decoration: none;
+}
+
+.navbar .menu .active {
+  color: #e9c402 !important;
+}
+
+.navbar .menu svg {
+  height: 45px;
+  width: auto;
+}
+
+/* ======================== Main Body ======================== */
+
+.topbody {
+  background: url(./assets/svg/background/background\ pertama.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 3300px;
+}
+
+/* ======================== Lain-Lainnya / Misc  ========================*/
+
+.page-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: #4ebeb7;
+  cursor: pointer;
+}
+
+.page-indicator.active {
+  background-color: #388580;
+  width: 40px;
+  border-radius: 40px;
+}
+
+.button-topic1,
+.button-topic2 {
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  background-color: #4ebeb7;
+  border: none;
+  filter: drop-shadow(0px 0px 8px rgba(78, 190, 183, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-topic1 {
+  margin-right: -10px;
+}
+
+.button-topic2 {
+  margin-left: -10px;
+}
+
+.box,
+.box2,
+.box3 {
+  background-color: #f4f9fa;
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  height: 370px;
+  width: 300px;
+  position: relative;
+}
+
+.box {
+  background: url("./assets/svg/topic/topic\ background\ 1.svg");
+  background-position: center;
+}
+
+.box2 {
+  background: url("./assets/svg/topic/topic\ background\ 2.svg");
+  background-position: center;
+}
+
+.box .top,
+.box2 .top,
+.box3 .top {
+  height: 202px;
+  border-radius: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box .bottom,
+.box2 .bottom,
+.box3 .bottom {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box .bottom h3,
+.box2 .bottom h3,
+.box3 .bottom h3 {
+  height: 62px;
+  width: 270px;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+
+.box .bottom p,
+.box2 .bottom p,
+.box3 .bottom p {
+  width: 270px;
+  height: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.16px;
+  margin: 10px 0;
+}
+
+.box .bottom a,
+.box2 .bottom a,
+.box3 .bottom a {
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: -0.15px;
+  padding: 6px 16px;
+  color: #fff;
+}
+
+.box .bottom a:hover,
+.box2 .bottom a:hover,
+.box3 .bottom a:hover {
+  color: #e9c402;
+}
+
+.box img,
+.box2 img,
+.box3 img {
+  position: absolute;
+  bottom: -10px;
+  height: 400px;
+  border-radius: 18px;
+}
+
+.blogbox {
+  background: #f4f9fa;
+  border-radius: 18px;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.blogbox .top {
+  z-index: 1;
+  height: 303px;
+  border-radius: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.blogbox .bottom {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blogbox .bottom h3 {
+  height: 66px;
+  width: 470px;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  margin: 0;
+  margin-top: 28px;
+}
+
+.blogbox .bottom p {
+  width: 270px;
+  height: 50px;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.blogbox .bottom a {
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.blogbox .bottom a:hover {
+  color: #e9c402;
+}
+
+.blogbox img {
+  z-index: 2;
+  position: absolute;
+  bottom: -10px;
+  border-radius: 18px;
+}
+
+/* ======================== Halaman Pertama ======================== */
+
+.home {
+  z-index: 4;
+  position: relative;
+  height: 654px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home img {
+  margin-top: 200px;
+}
+
+.home h2 {
+  color: #3c9892;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.288px;
+  margin-top: 17px;
+}
+
+.home h5 {
+  width: 796px;
+  height: 100px;
+  margin-top: 0;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.8;
+}
+
+.home a {
+  position: relative;
+  display: flex;
+  width: 218px;
+  height: 53.508px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #3c9892;
+  box-shadow: 0px 0px 8px 0px rgba(60, 152, 146, 0.25);
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home a:hover {
+  background: transparent;
+  color: #388580;
+}
+
+/* ======================== Halaman Kedua ======================== */
+
+.ilmuwan {
+  z-index: 3;
+  position: relative;
+  background-image: url(./assets/svg/background/background\ kedua.svg);
+  height: 719px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 45px;
+  align-items: center;
+}
+
+.ilmuwan h2 {
+  color: #388580;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.ilmuwan .topic-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ilmuwan .topic-container #boxes {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.topic-container .btn {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ======================== Halaman Ketiga ======================== */
+
+.blog {
+  height: 780px;
+  bottom: 160px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./assets/svg/background/background\ ketiga.svg");
+  background-position: center top;
+  background-size: cover;
+  gap: 45px;
+}
+
+.blog h2 {
+  color: #388580;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.blog .blog-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog .blog-container #boxes2 {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.blog-container .btn {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ======================== Halaman Keempat ======================== */
+
+.about {
+  height: 640px;
+  bottom: 120px;
+  position: relative;
+  background: url("./assets/svg/background/background\ keempat.svg");
+  background-position: center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+}
+
+.about h2 {
+  color: #388580;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  margin-top: 74px;
+  margin-bottom: 0;
+}
+
+.about p {
+  border-radius: 18px;
+  border: 1px dashed #808080;
+  width: 757px;
+  padding: 28px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.85;
+}
+
+/* ======================== Halaman Kelima ======================== */
+
+.team {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  bottom: 300px;
+}
+
+.team .text h2 {
+  color: #388580;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.team .text p {
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  font-family: Plus Jakarta Sans;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  opacity: 0.8;
+}
+
+.team .group {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .group .arrow-left {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -22px;
+}
+
+.team .group .arrow-left {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.team .group .arrow-right {
+  position: absolute;
+  bottom: -10px;
+  margin-left: 250px;
+}
+
+/* ======================== Footer ======================== */
+
+.footer {
+  margin-top: -200px;
+  position: relative;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: url(./assets/svg/background/background\ footer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer .text {
+  display: flex;
+  gap: 96px;
+}
+
+/*DHAFIN!!*/
+.footer .main {
+  display: flex;
+  gap: 96px;
+}
+/*DHAFIN!!*/
+
+.footer .slogan {
+  max-width: 293px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.footer .navigation,
+.footer .follow,
+.footer .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 267px;
+}
+
+.footer p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
